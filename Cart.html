@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="icon" type="image/png" href="slide/favicon.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/21a13c890b.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link rel="stylesheet" href="plain.css">
+        <script src="Cart.js"></script>
+        <title>Apriori-Coffee</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="slide/logo2.png">
+        </div>
+        <div class="menu">
+            <li><a href="">CAFE</a>     
+                <ul class="sub-menu">
+                    <li><a href="">Cà phê truyền thống</a></li>
+                  <ul>
+                    <li><a href="">Cà phê trứng</a></li>
+                    <li><a href="">Cà phê đen</a></li>
+                    <li><a href="">Cà phê sữa</a></li>
+                    <li><a href="">Cà phê sữa dừa</a></li>
+                    <li><a href="">Cà phê sữa tươi</a></li>
+                    <li><a href="">Cacao</a></li>
+                    <li><a href="">Matcha Latte</a></li>
+                  </ul>
+            </li>  
+            <li><a href="">Cà phê Ý</a>
+                <ul>
+                    <li><a href="">Americano</a></li>
+                    <li><a href="">Espresso</a></li>
+                    <li><a href="">Cappuccino</a></li>
+                    <li><a href="">Latte</a></li>
+                    <li><a href="">Mocha</a></li>
+                    <li><a href="">Caramel Macchiato</a></li>
+                </ul>
+            </li>
+        </ul>   
+        
+            <li><a href="">SỮA CHUA</a>
+                <ul class="sub-menu sua-chua">
+                    <li><a href="">Sữa chua kiwi cam vàng</a></li>
+                    <li><a href="">Sữa chua ổi hồng</a></li>
+                    <li><a href="">Sữa chua xoài</a></li>
+                    <li><a href="">Sữa chua đào</a></li>
+                    <li><a href="">Sữa chua mâm xôi</a></li>
+                    <li><a href="">Sữa chua nho đen</a></li>
+        </ul>
+    </li>   
+
+    <li><a href="">TRÀ</a>
+        <ul class="sub-menu tra">
+            <li><a href="">Trà hoa quả</a>
+                <ul>
+                    <li><a href="">Trà đào dưa lưới</a></li>
+                    <li><a href="">Trà vải nha đam</a></li>
+                    <li><a href="">Trà ổi hồng dưa lưới</a></li>
+                    <li><a href="">Trà đào</a></li>
+                    <li><a href="">Trà kiwi hạt chia</a></li>
+                    <li><a href="">Trà xoài nhiệt đới</a></li>
+                    <li><a href="">Trà hoa quả nhiệt đới</a></li>
+                </ul>
+            </li>   
+
+            <li><a href="">Trà sữa</a>
+                <ul>
+                    <li><a href="">Trà sữa cam nướng</a></li>
+                    <li><a href="">Hồng trà sữa truyền thống</a></li>
+                    <li><a href="">Trà sữa bạc hà</a></li>
+                </ul>
+            </li>
+        </ul>   
+    </li>   
+            <li><a href="">NƯỚC ÉP TƯƠI</a>
+                <ul class="sub-menu nuoc-ep">
+                    <li><a href="">Blooming March<br>
+                        <span class="item-description">(Táo-dâu-thơm)</span></a></li>
+                    <li><a href="">Maybee<br>
+                        <span class="item-description">(Táo-thơm-chanh dây)</span></a></li>
+                    <li><a href="">Nước ép chanh dây</a></li>
+                    <li><a href="">Nước ép cam hạt chia</a></li>
+                    <li><a href="">Nước ép táo</a></li>
+                    <li><a href="">Nước ép dưa hấu</a></li>
+                    <li><a href="">Nước ép thơm</a></li>
+                    <li><a href="">Nước ép dâu</a></li>
+        </ul>
+    </li>   
+
+            <li><a href="">ĐÁ XAY</a>
+                <ul class="sub-menu da-xay">
+                    <li><a href="">Phô mai chuối đá xay</a></li>                
+                    <li><a href="">Chanh tuyết</a></li>
+                    <li><a href="">Caramel muối đá xay</a></li>
+                    <li><a href="">Matcha đá xay</a></li>
+                    <li><a href="">Choco bạc hà đá xay</a></li>
+        </ul>
+    </li>    
+        </div>
+        <div class="others">
+            <ul class="search-bar">
+                <li><input id="searchInput" placeholder="Tìm kiếm" type="text"></li>
+                <li><i class="fas fa-search" onclick="searchProducts()"></i></li>
+                <div id="searchResults"></div>
+            </ul>
+            <li class="user-menu">
+                <a class="user-icon" href="#" id="userIcon">
+                  <i class="fa-regular fa-user"></i>
+                  <ul class="sub-user" id="subUser">
+                    <li><a href="#" id="loginButton">Đăng nhập</a></li>
+                    <li><a href="#" id="registerButton">Đăng ký</a></li>
+                  </ul>
+                </a>
+            </li>
+            
+              <li class="cart-container">
+                <i class="fa-solid fa-bag-shopping" id="cartIcon"></i>
+                <span id="cartCount">0</span>
+            </li>
+            <li><a class="fa-solid fa-gear" href = "admin.html" style="color: black;">&nbsp</a></li>
+        </div>
+
+        <div class="validate-container">
+            <div class="form-container sign-up-container">
+                <form action="#">
+                    <h1>Đăng ký</h1>
+                    <span>Để bắt đầu sử dụng dịch vụ của chúng tôi</span>
+                    <i class="fa-solid fa-xmark exit-button"></i>
+                    <input type="text" placeholder="Họ và tên" />
+                    <input type="email" placeholder="Email" />
+                    <input type="text" placeholder="Tên đăng nhập" />
+                    <input type="password" placeholder="Mật khẩu" />
+                    <input type="tel" placeholder="Số điện thoại" pattern="[0-9]{10}" title="Số điện thoại gồm 10 chữ số"/>
+                    <button>Đăng ký</button>
+                </form>
+            </div>
+            <div class="form-container sign-in-container">
+                <form action="#">
+                    <h1>Đăng nhập</h1>
+                    <span>Để tiếp tục sử dụng dịch vụ của chúng tôi</span>
+                    <i class="fa-solid fa-xmark exit-button"></i>
+                    <input type="email" placeholder="Email" />
+                    <input type="password" placeholder="Mật khẩu" />
+                    <a href="#">Quên mật khẩu?</a>
+                    <button>Đăng nhập</button>
+                </form>
+            </div>
+        </div>
+    </header>
+ 
+<!--------------------------------------------------------Product------------------------------------------------------------------------>
+<div class="order-management">
+    <h1>Quản lý đơn hàng</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Tên Khách Hàng</th>
+          <th>Sản Phẩm</th>
+          <th>Số Lượng</th>
+          <th>Thành Tiền</th>
+          <th>Tình Trạng</th>
+          <th>Thao Tác</th>
+        </tr>
+      </thead>
+      <tbody id="orderTableBody">
+        <!-- Dữ liệu đơn hàng sẽ được thêm vào đây bằng JavaScript -->
+      </tbody>
+    </table>
+  </div>
+  <form id="addProductForm">
+    <h2>Thêm Sản Phẩm Mới</h2>
+    <label for="productName">Tên sản phẩm:</label>
+    <input type="text" id="productName" required>
+
+    <label for="productType">Loại sản phẩm:</label>
+    <input type="text" id="productType" required>
+
+    <label for="productPrice">Giá sản phẩm:</label>
+    <input type="text" id="productPrice" required>
+
+    <label for="productImage">Link ảnh sản phẩm:</label>
+    <input type="text" id="productImage" required>
+
+    <button type="button" onclick="addProduct()">Thêm Sản Phẩm</button>
+</form>
+
+<div id="productContainer"></div>
+
+
+<!---------------------------------------------------------------footer-------------------------------------------------------------- -->
+<div class="footer">
+    <li><a href=""><img src=""></a>Liên hệ</li>
+    <li><a href=""><img src=""></a>Tuyển dụng</li>
+    <li><a href=""><img src=""></a>Giới thiệu</li>  
+    <li>
+        <a href="https://web.facebook.com/Aprioricoffeehouse" class="fab fa-facebook"></a>
+    </li>
+</div>
+<div class="footer-center">
+    <p>
+Địa chỉ cửa hàng: <br>
+18 Trần Doãn Khanh, Đa Kao, Quận 1<br>
+449/11 Sư Vạn Hạnh, Phường 12, Quận 10<br>
+Hotline:<b> 0812 661 939</b>
+    </p>
+</div>
+</body>
+</html>
